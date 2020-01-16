@@ -6,5 +6,5 @@ package com.hans.kotkin.framework
  *@描述  接口常量类
  */
 object Api {
-    const val BASE_URL: String = "http://47.102.109.120:18083/"
+    const val BASE_URL: String = "https://apidev.creative-apartment.com.cn/"
 }

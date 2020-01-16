@@ -36,7 +36,7 @@ abstract class BaseFragment : RxFragment(), BaseView {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onCreate: ")
+       // Log.d(TAG, "onCreate: ")
         super.onCreate(savedInstanceState)
         if (savedInstanceState != null) {
             val isSupportHidden = savedInstanceState.getBoolean(STATE_SAVE_IS_HIDDEN)
@@ -50,7 +50,7 @@ abstract class BaseFragment : RxFragment(), BaseView {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Log.d(TAG, "onCreateView: ")
+       // Log.d(TAG, "onCreateView: ")
         mInflater = inflater
         setRootLayout(bindLayout())
         return mContentView
@@ -63,20 +63,20 @@ abstract class BaseFragment : RxFragment(), BaseView {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d(TAG, "onViewCreated: ");
+       // Log.d(TAG, "onViewCreated: ");
         super.onViewCreated(view, savedInstanceState)
         initExtra(arguments)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onActivityCreated: ")
+       // Log.d(TAG, "onActivityCreated: ")
         super.onActivityCreated(savedInstanceState)
         initView(savedInstanceState, mContentView)
         doWork()
     }
 
     override fun onDestroyView() {
-        Log.d(TAG, "onDestroyView: ")
+      //  Log.d(TAG, "onDestroyView: ")
         if (mContentView != null) {
             val viewGroup = mContentView!!.parent as ViewGroup
             viewGroup.removeView(mContentView)
@@ -85,13 +85,13 @@ abstract class BaseFragment : RxFragment(), BaseView {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        Log.d(TAG, "onSaveInstanceState: ")
+      //  Log.d(TAG, "onSaveInstanceState: ")
         super.onSaveInstanceState(outState)
         outState.putBoolean(STATE_SAVE_IS_HIDDEN, isHidden)
     }
 
     override fun onDestroy() {
-        Log.d(TAG, "onDestroy: ")
+      //  Log.d(TAG, "onDestroy: ")
         super.onDestroy()
     }
 

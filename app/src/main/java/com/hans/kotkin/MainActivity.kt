@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.blankj.utilcode.util.FragmentUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hans.kotkin.base.BaseActivity
+import com.hans.kotkin.fragment.MineFragment
 import com.hans.kotkin.fragment.RootFragment
 import com.hans.kotkin.framework.callback.ObserverCallBack
 import com.hans.kotkin.framework.callback.RxStreamHelper
@@ -57,10 +58,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             curIndex = savedInstanceState.getInt("curIndex")
         }
         fragmentNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        mFragments.add(RootFragment.newInstance())
-        mFragments.add(RootFragment.newInstance())
-        mFragments.add(RootFragment.newInstance())
-        mFragments.add(RootFragment.newInstance())
+        mFragments.add(RootFragment.newInstance("首页"))
+        mFragments.add(RootFragment.newInstance("精彩宽庭"))
+        mFragments.add(RootFragment.newInstance("购物车"))
+        mFragments.add(MineFragment())
         FragmentUtils.add(
             supportFragmentManager,
             mFragments,
@@ -114,10 +115,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
                 }
 
-                override fun onError(code: Int, msg: String?) {
+               /* override fun onError(code: Int, msg: String?) {
                     super.onError(code, msg)
                     Log.d("", "")
-                }
+                }*/
             }
         )
 
