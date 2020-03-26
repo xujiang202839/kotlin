@@ -31,7 +31,9 @@ class MineFragment : BaseFragment(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.bt_login -> {
-                startActivity(Intent(context, LoginActivity::class.java))
+                val intent = Intent(context, LoginActivity::class.java)
+                intent.putExtra("name", "跳转登录")
+                startActivity(intent)
             }
         }
     }
