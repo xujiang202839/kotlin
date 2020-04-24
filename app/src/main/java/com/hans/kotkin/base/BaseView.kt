@@ -20,5 +20,5 @@ interface BaseView {
 
     fun initView(@Nullable savedInstanceState: Bundle?, @Nullable contentView: View?);
 
-    fun doWork()
+   open fun doWork()
 }

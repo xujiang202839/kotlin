@@ -114,11 +114,6 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 override fun onSuccess(t: String?) {
 
                 }
-
-               /* override fun onError(code: Int, msg: String?) {
-                    super.onError(code, msg)
-                    Log.d("", "")
-                }*/
             }
         )
 

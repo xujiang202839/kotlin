@@ -6,11 +6,26 @@ package com.hans.kotkin.beans
  *@描述
  */
 data class UserBean(
-    val access_token: String,
-    val expires_in: Int,
-    val isRepairman: Int,
-    val refresh_token: String,
-    val scope: String,
-    val token_type: String,
-    val type: Int
-)
+    var access_token: String = "",
+    var expires_in: Int,
+    var isRepairman: Int,
+    var refresh_token: String,
+    var scope: String,
+    var token_type: String,
+    var type: Int,
+    var typeInfo: List<NameInfoBean>? = null,
+    var userInfo: List<UserInfoBean>? = null
+) {
+    data class UserInfoBean(
+        var name: String? = "",
+        var sex: List<SexInfo>? = null
+    ) {
+        data class SexInfo(
+            var sex: Int = 1
+        )
+    }
+
+    data class NameInfoBean(
+        var name: String
+    )
+}

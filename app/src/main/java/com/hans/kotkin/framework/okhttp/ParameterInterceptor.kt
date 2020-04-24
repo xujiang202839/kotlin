@@ -29,23 +29,4 @@ class ParameterInterceptor : Interceptor {
         }
         return chain.proceed(request)
     }
-
-
-    /*override fun intercept(chain: Interceptor.Chain): Response {
-        val request = chain.request()
-            .newBuilder()
-            .addHeader("Authorization", "12333")
-            .addHeader("terminaltype", "12")
-            .build()
-        return chain.proceed(request)
-    }*/
-
-    /* private fun addParams(request: Request): Request {
-         val newBuilder = request.newBuilder()
-         if (MyApplication.authorization!!.isEmpty()) {
-             newBuilder.addHeader("Authorization", MyApplication.authorization)
-                 .addHeader("", "12")
-         }
-         return newBuilder.build()
-     }*/
 }
