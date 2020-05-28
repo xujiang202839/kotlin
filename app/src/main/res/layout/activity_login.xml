@@ -8,13 +8,24 @@
     android:orientation="vertical"
     tools:context=".activity.LoginActivity">
 
+    <com.hans.kotkin.view.BaseTitleBarView
+        android:layout_width="match_parent"
+        app:titleBar="登录"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/tv_text"
-        android:layout_gravity="center_horizontal"
-        android:text="登录页"
-        android:textSize="20sp"
-        android:textColor="@color/blue_00A4BF"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/blue_00A4BF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击测试" />
 
 </LinearLayout>

@@ -13,7 +13,7 @@ class MyApplication : Application() {
 
     companion object {
         var instance: MyApplication? = null
-        var authorization: String ? = ""
+        var authorization: String = ""
     }
 
     override fun onCreate() {

@@ -13,6 +13,7 @@ object SPUtils {
 
     private const val name = "APP_Config"
 
+    //lazy 在第一次被调用时就被初始化，以后调用该属性会返回之前的结果。
     private val prefs: SharedPreferences by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
         MyApplication.instance!!.getSharedPreferences(name, Context.MODE_PRIVATE)
     }

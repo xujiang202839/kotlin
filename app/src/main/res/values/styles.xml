@@ -10,4 +10,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--自定义标题栏-->
+    <declare-styleable name="BaseTitleBarView">
+        <attr name="titleBar" format="string" />
+        <attr name="textBar" format="string" />
+        <attr name="textColorBar" format="color" />
+        <attr name="buttonBar" format="reference" />
+        <attr name="backBar" format="boolean" />
+    </declare-styleable>
 </resources>

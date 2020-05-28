@@ -8,5 +8,6 @@
     <color name="tran">#00000000</color>
     <color name="blue_00A4BF">#00A4BF</color><!--蓝色 -->
     <color name="grey_ad">#ADADAD</color><!--灰色 -->
-
+    <color name="black_1e">#1E1E1E</color><!--黑色 -->
+    <color name="black_333333">#333333</color><!--黑色 -->
 </resources>
