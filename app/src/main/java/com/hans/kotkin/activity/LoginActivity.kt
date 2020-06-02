@@ -72,7 +72,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener, MyInterface {
         foo()
         MyInterface.Companion.test()
         bar()
-        DemoObject.a()
+        DemoObject.a("")
         DemoObject2("传参数")
         DemoObject2.MyObject.a()
 

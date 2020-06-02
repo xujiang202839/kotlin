@@ -20,6 +20,7 @@ interface MyInterface {
     //companion object StaticParams
 
     fun bar()
+
     fun foo() {
         Log.d(TAG, "从接口中实现该方法")
     }
